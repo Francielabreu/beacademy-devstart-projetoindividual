@@ -21,6 +21,18 @@ class ProductController extends Controller
 
     }
 
+    public function show($id)
+    {
+
+        
+        if(!$products = Product::find($id))
+          return redirect()->route('products.index');
+          
+        $title = 'Produto ' .$products->name;
+
+        return view('products.show', compact('products', 'title'));
+    }
+
 
 
 }
