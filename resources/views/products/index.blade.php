@@ -1,10 +1,12 @@
 @extends('template.app')
-@section('title', "Listagem dos produtos")
+@section('title', "Listagem de produtos")
 @section('content')
 
 @section('content')
+
+    <a href="{{ route('products.create') }}" class="btn btn-sm btn-primary mt-3">Adicionar Novos Produtos</a>
+
     <h3 class="pt-3">Listagem dos Produtos</h3>
-
 
     <table class="table">
         <thead class="table-primary table-hover">
