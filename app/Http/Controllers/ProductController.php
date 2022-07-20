@@ -28,10 +28,24 @@ class ProductController extends Controller
         if(!$products = Product::find($id))
           return redirect()->route('products.index');
           
-        $title = 'Produto ' .$products->name;
+        $title = 'Produto '.$products->name;
 
         return view('products.show', compact('products', 'title'));
     }
+
+    public function create()
+    {
+        return view('products.create');
+    }
+
+    public function store(Request $request)
+    {
+        $data = $request->all();
+        $this->model->create($data);
+        return redirect()->route('products.index');
+    }
+
+    
 
 
 
