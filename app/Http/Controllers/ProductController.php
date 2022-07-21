@@ -45,6 +45,24 @@ class ProductController extends Controller
         return redirect()->route('products.index');
     }
 
+    public function edit($id)
+    {
+        if(!$products = $this->model->find($id)) 
+        return redirect()->route('products.index');
+
+        return view('products.edit', compact('products'));
+    }
+
+    public function update(Request $Request, $id)
+    {
+      if (!$products = $this->model->find($id)) 
+        return redirect()->route('products.index');
+      $data = $Request->all();
+      $products->update($data);
+  
+      return redirect()->route('products.index');
+    }
+
     
 
 
