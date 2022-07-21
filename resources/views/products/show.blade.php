@@ -2,7 +2,7 @@
 @section('title', "Listagem dos Produtos")
 @section('content')
 
-    <h3 class="pt-3">Listagem dos Produtos</h3>
+    <h3 class="pt-3">Listagem do Produto: {{$products->name}}</h3>
 
 
     <table class="table" width="100%">
@@ -37,7 +37,7 @@
                     <td>R$ {{ $products->saleprice }}</td>
 
                     <td>
-                        <a href="" class="btn btn btn-sm btn-outline-primary">Editar</a>
+                        <a href="{{route('products.edit', $products->id)}}" class="btn btn btn-sm btn-outline-primary">Editar</a>
                     </td>
                     <td>
                            
