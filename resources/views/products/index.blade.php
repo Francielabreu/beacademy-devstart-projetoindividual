@@ -8,7 +8,7 @@
 
     <h3 class="pt-3">Listagem dos Produtos</h3>
 
-    <table class="table">
+    <table class="table text-center">
         <thead class="table-primary table-hover">
           <tr>
             <th scope="col">#ID</th>
@@ -42,7 +42,7 @@
 
             <td>
                 <a href="{{ route('products.show',$dataProduct->id) }}"
-                    class="btn btn-sm btn-primary">Visualizar</a>
+                    class="btn btn-sm btn-info">Visualizar</a>
             </td>
           </tr>
           @endforeach

@@ -5,7 +5,7 @@
     <h3 class="pt-3">Listagem do Produto: {{$products->name}}</h3>
 
 
-    <table class="table" width="100%">
+    <table class="table text-center" width="100%">
         <thead class="table-primary table-hover">
             <tr>
                 <th scope="col">#ID</th>
@@ -37,14 +37,14 @@
                     <td>R$ {{ $products->saleprice }}</td>
 
                     <td>
-                        <a href="{{route('products.edit', $products->id)}}" class="btn btn btn-sm btn-outline-primary">Editar</a>
+                        <a href="{{route('products.edit', $products->id)}}" class="btn btn btn-sm btn-secondary">Editar</a>
                     </td>
                     <td>
                            
                         <form action="{{ route('products.destroy', $products->id) }}" method="POST">
                             @method('DELETE')
                             @csrf
-                            <button type="submit" class="btn btn-sm btn-primary">Deletar</button>
+                            <button type="submit" class="btn btn-sm btn-danger">Deletar</button>
                         </form>
                          
                     </td>

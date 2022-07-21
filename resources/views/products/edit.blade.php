@@ -61,6 +61,8 @@
             <input type="text" id="saleprice" name="saleprice" class="form-control" placeholder="Preço de venda" value="{{$products->saleprice}}">
         </div>
 
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <button type="submit" class="btn btn-outline-primary col-2">Salvar</button>
+        
+        
     </form>
 @endsection

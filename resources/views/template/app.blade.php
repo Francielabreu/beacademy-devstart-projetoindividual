@@ -13,7 +13,7 @@
 
 <body>
 
-    <div class="container p-3">
+    <div class="container w 75 p-3">
 
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
