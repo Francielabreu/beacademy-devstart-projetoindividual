@@ -41,7 +41,11 @@
                     </td>
                     <td>
                            
-                            <button type="submit" class="btn btn-sm btn-outline-primary">Deletar</button>
+                        <form action="{{ route('products.destroy', $products->id) }}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-sm btn-primary">Deletar</button>
+                        </form>
                          
                     </td>
                 </tr>
