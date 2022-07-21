@@ -63,6 +63,15 @@ class ProductController extends Controller
       return redirect()->route('products.index');
     }
 
+    public function destroy($id)
+    {
+        if (!$products = $this->model->find($id)) 
+            return redirect()->route('products.index');
+        $products->delete();
+        return redirect()->route('products.index');
+
+    }
+
     
 
 
