@@ -21,12 +21,12 @@
                 <div class="collapse navbar-collapse text-uppercase" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
+                        
                         <li class="nav-item">
-                            <a class="nav-link text-white" aria-current="page" href="{{route('products.index')}}">Home</a>
+                            <a class="nav-link text-white" aria-current="page" href="{{route('users.index')}}">Usuarios</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Produtos</a>
+                            <a class="nav-link text-white" aria-current="page" href="{{route('products.index')}}">Produtos</a>
                         </li>
                     </ul>
 
