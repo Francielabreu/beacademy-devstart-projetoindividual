@@ -23,4 +23,17 @@ class Product extends Model
         'saleprice',
 
     ];
+
+    public function getProduct(string $search = null)
+    {
+        $products = $this->where(function ($query) use ($search) {
+            if($search){
+                $query->where('description', $search);
+                $query->orwhere('name', 'LIKE', "%{$search}%");
+            }
+        })
+            ->paginate(5);
+
+        return $products;
+    }
 }
