@@ -37,7 +37,7 @@
                     <td>R$ {{ $products->saleprice }}</td>
 
                     <td>
-                        <a href="{{route('products.edit', $products->id)}}" class="btn btn btn-sm btn-secondary">Editar</a>
+                        <a href="{{route('products.edit', $products->id)}}" class="btn btn-sm btn-secondary">Editar</a>
                     </td>
                     <td>
                            
