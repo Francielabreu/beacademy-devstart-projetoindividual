@@ -1,15 +1,24 @@
 <?php
 
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+    UserController,
+    ProductController
+};
 
+
+
+
+
+
+require __DIR__.'/auth.php';
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-
+Route::middleware(['auth'])->group(function () {
+    
     Route::get('/users/create',[UserController::class,'create'])->name('users.create');
     Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
     Route::put('/users/{id}',[UserController::class, 'update'])->name('users.update');
@@ -26,3 +35,4 @@ Route::post('/products',[ProductController::class,'store'])->name('products.stor
 Route::delete('/products/{id}',[ProductController::class,'destroy'])->name('products.destroy');
 Route::get('/products',[ProductController::class,'index'])->name('products.index');
 Route::get('/products/{id}',[ProductController::class,'show'])->name('products.show');
+});
